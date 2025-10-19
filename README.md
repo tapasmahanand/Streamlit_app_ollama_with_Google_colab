@@ -48,18 +48,19 @@ This project demonstrates how to set up and run a conversational LLM (Large Lang
 # Installation
 1. Run in Google Colab:
 
-Clone or upload notebook: Use Copy-of-Streamlit_app_ollama_with_Google_colab.ipynb in Colab.
+      Clone or upload notebook: Use Copy-of-Streamlit_app_ollama_with_Google_colab.ipynb in Colab.
 
 2. Install required libraries (auto-installs in notebook):
-!pip install streamlit PyMuPDF4LLM pandas openpyxl pyngrok requests
 
-3. Install Ollama and ngrok:
+      !pip install streamlit PyMuPDF4LLM pandas openpyxl pyngrok requests
 
-!curl -fsSL https://ollama.com/install.sh | sh
+4. Install Ollama and ngrok:
 
-!curl -s https://ngrok-agent.s3.amazonaws.com/ngrok.asc | sudo tee /etc/apt/trusted.gpg.d/ngrok.asc >/dev/null
-echo "deb https://ngrok-agent.s3.amazonaws.com buster main" | sudo tee /etc/apt/sources.list.d/ngrok.list
-sudo apt update && sudo apt install ngrok
+      !curl -fsSL https://ollama.com/install.sh | sh
+
+      !curl -s https://ngrok-agent.s3.amazonaws.com/ngrok.asc | sudo tee /etc/apt/trusted.gpg.d/ngrok.asc >/dev/null
+      echo "deb https://ngrok-agent.s3.amazonaws.com buster main" | sudo tee /etc/apt/sources.list.d/ngrok.list
+      sudo apt update && sudo apt install ngrok
 
 # Usage
 Notebook Flow:
@@ -75,23 +76,6 @@ Notebook Flow:
 5. Download results: Export results to Excel directly from the UI.
 
 6. Streamlit App URL: Colab will display your unique ngrok URL for accessing the Streamlit interface (runs in your cloud environment).
-
-Example Colab cell:
-
-#Run this cell to start the Streamlit app and display ngrok URL
-
-from pyngrok import ngrok
-
-import time
-
-
-!streamlit run app.py > logs.txt &
-
-time.sleep(5)
-
-ngrok_tunnel = ngrok.connect(addr=8501, proto="http", bind_tls=True)
-
-print("Streamlit app URL:", ngrok_tunnel.public_url)
 
 # Example Workflow (Colab)
 1. Upload PDFs
