@@ -13,13 +13,6 @@ Usage
 
 Example Workflow (Colab)
 
-Project Structure
-
-Contributing
-
-License
-
-Contact
 
 # Project Overview
 This project demonstrates how to set up and run a conversational LLM (Large Language Model) pipeline in Google Colab using the Ollama open-source model server and a custom Streamlit app for PDF summarization and interactive responses. Ngrok tunnels are used to make both the Streamlit app and Ollama server accessible for real-time cloud interaction.
@@ -86,26 +79,5 @@ Notebook Flow:
 
 4. Download Excel sheet for summary data
 
-# Project Structure
-Streamlit_app_ollama_with_Google_colab/
-
-- Copy-of-Streamlit_app_ollama_with_Google_colab.ipynb  # Main Colab notebook
-  
-- app.py                 # Streamlit frontend (written by notebook)
-
-- requirements.txt       # Python dependencies (if included)
-  
-- README.md              # This documentation
-
-# Contributing
-Contributions and suggestions are welcome! To propose changes, open an issue or pull request. For bug reports, include clear reproduction steps and screenshots if possible.
-
-# License
-See the LICENSE file for details.
-
-# Contact
-Maintainer: Tapas Mahanand (GitHub Profile)
-
-For issues/support, use the GitHub “Issues” tab or Colab comments.
 
 
